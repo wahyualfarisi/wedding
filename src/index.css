@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  /* Colors - Warm Taupe & Cream Theme */
+  --color-primary: #A98B76; 
+  --color-secondary: #D4AF37; /* Keeping gold for accents */
+  --color-accent-green: #A98B76; /* Soften the traditional colors to elegant taupe */
+  --color-accent-yellow: #cca68d; /* A complementary warmer tone */
+  --color-bg: #F3E4C9; 
+  --color-text: #3c3027; /* Dark brown for text readability */
+  --color-text-light: #706359;
+  --color-white: #ffffff;
+
+  /* Fonts */
+  --font-heading: 'Playfair Display', serif;
+  --font-names: 'Great Vibes', cursive;
+  --font-body: 'Inter', sans-serif;
+  
+  /* Layout */
+  --max-width: 500px; /* Mobile first, container max width for invitation feel */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  /* Centering the mobile view on desktop */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  background-image: 
+    linear-gradient(45deg, #111 25%, transparent 25%), 
+    linear-gradient(-45deg, #111 25%, transparent 25%), 
+    linear-gradient(45deg, transparent 75%, #111 75%), 
+    linear-gradient(-45deg, transparent 75%, #111 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  /* Muted dark background on desktop with a central scrollable container */
+  background: #2a2a2a; 
+}
+
+#root {
+  width: 100%;
+  max-width: var(--max-width);
+  background-color: var(--color-bg);
+  min-height: 100vh;
+  position: relative;
+  box-shadow: 0 0 50px rgba(0,0,0,0.5);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  font-weight: 700;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: var(--color-text-light);
+  font-size: 1rem;
+}
+
+/* Common Motifs & Utilities */
+.text-center { text-align: center; }
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+
+.section-container {
+  padding: 4rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Beautiful Padang X Betawi divider */
+.pattern-divider {
+  width: 100%;
+  height: 40px;
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--color-secondary) 0,
+    var(--color-secondary) 10px,
+    var(--color-primary) 10px,
+    var(--color-primary) 20px
+  );
+  opacity: 0.8;
+  position: relative;
+}
+
+.pattern-divider::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to right, var(--color-bg), transparent, var(--color-bg));
+}
+
+/* Betawi Gigi Balang trim */
+.gigi-balang-top, .gigi-balang-bottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-color: var(--color-primary);
+  /* Uses CSS clip path to form zigzags */
+  clip-path: polygon(
+    0 0, 5% 100%, 10% 0, 15% 100%, 20% 0, 25% 100%, 
+    30% 0, 35% 100%, 40% 0, 45% 100%, 50% 0, 55% 100%, 
+    60% 0, 65% 100%, 70% 0, 75% 100%, 80% 0, 85% 100%, 
+    90% 0, 95% 100%, 100% 0, 100% 100%, 0 100%
+  );
+  z-index: 2;
+}
+.gigi-balang-top {
+  top: 0;
+  transform: rotate(180deg);
+  background-color: var(--color-secondary);
+}
+.gigi-balang-bottom {
+  bottom: 0;
+  background-color: var(--color-secondary);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border: 2px solid var(--color-secondary);
+  padding: 0.75rem 2rem;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Specific Section Styles */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1583939000215-68ba8cbaae74?auto=format&fit=crop&q=80') center/cover;
+  position: relative;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 1rem;
+  border: 2px solid var(--color-secondary);
+  pointer-events: none;
+}
+
+.hero h4 {
+  color: var(--color-secondary);
+  font-family: var(--font-body);
+  letter-spacing: 3px;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+
+.hero h1 {
+  font-family: var(--font-names);
+  font-size: 4.5rem;
+  color: var(--color-white);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+  color: #ddd;
+  font-family: var(--font-heading);
+  font-style: italic;
+  margin-bottom: 3rem;
+}
+
+.couple-names {
+  font-family: var(--font-names);
+  font-size: 3rem;
+  color: var(--color-primary);
+  margin: 1rem 0;
+}
+
+.portrait-frame {
+  width: 200px;
+  height: 250px;
+  margin: 0 auto 1.5rem;
+  position: relative;
+  border-radius: 100px 100px 0 0; /* Arch shape */
+  overflow: hidden;
+  border: 4px solid var(--color-secondary);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 5px;
+  background-color: var(--color-white);
+}
+
+.portrait-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 95px 95px 0 0;
+}
+
+.event-card {
+  background-color: var(--color-white);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.event-card::before {
+  content: "✦";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-secondary);
+  font-size: 1.5rem;
+  background: var(--color-white);
+  padding: 0 10px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  aspect-ratio: 1;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-item.tall {
+  grid-row: span 2;
+  aspect-ratio: 1/2.1;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-control {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: var(--font-body);
+  transition: border-color 0.3s;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.footer {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  padding: 3rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.footer h3 {
+  color: var(--color-white);
+  font-family: var(--font-names);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* ========================================
+   Invitation Reveal System
+   ======================================== */
+
+/* Hidden state - all content below the hero */
+.invitation-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 1s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.8s ease 0.2s;
+}
+
+/* Revealed state */
+.invitation-content--open {
+  max-height: none;
+  overflow: visible;
+  opacity: 1;
+}
+
+/* Staggered section entrance */
+.invitation-content--open > *:nth-child(1) {
+  animation: sectionReveal 0.8s ease-out 0.1s both;
+}
+.invitation-content--open > *:nth-child(2) {
+  animation: sectionReveal 0.8s ease-out 0.25s both;
+}
+.invitation-content--open > *:nth-child(3) {
+  animation: sectionReveal 0.8s ease-out 0.4s both;
+}
+.invitation-content--open > *:nth-child(4) {
+  animation: sectionReveal 0.8s ease-out 0.55s both;
+}
+.invitation-content--open > *:nth-child(5) {
+  animation: sectionReveal 0.8s ease-out 0.7s both;
+}
+
+@keyframes sectionReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
