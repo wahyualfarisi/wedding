@@ -60,6 +60,7 @@ function App() {
         <Couple />
         <EventSection />
         <Gallery />
+        <RSVP />
         <Footer />
       </div>
 

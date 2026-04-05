@@ -33,7 +33,7 @@ const RSVP = () => {
           <div className="event-card" style={{ padding: '1.5rem', marginBottom: '0' }}>
             <h3 style={{ fontFamily: 'var(--font-body)', fontSize: '1.2rem', color: 'var(--color-text)' }}>Bank Mandiri</h3>
             <p className="mb-2" style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--color-primary)' }}>123455</p>
-            <p className="mb-3">a.n. Rizky Ramadhan (Pria)</p>
+            <p className="mb-3">a.n. Wahyu Alfarisi (Pria)</p>
             <button 
               onClick={() => handleCopy('123455', 'mandiri')} 
               className="btn-primary" 
@@ -46,7 +46,7 @@ const RSVP = () => {
           <div className="event-card" style={{ padding: '1.5rem', marginBottom: '0' }}>
             <h3 style={{ fontFamily: 'var(--font-body)', fontSize: '1.2rem', color: 'var(--color-text)' }}>Bank BCA</h3>
             <p className="mb-2" style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--color-primary)' }}>23423432</p>
-            <p className="mb-3">a.n. Aisyah Putri (Wanita)</p>
+            <p className="mb-3">a.n. Putri Nur Azizah (Wanita)</p>
             <button 
               onClick={() => handleCopy('23423432', 'bca')} 
               className="btn-primary" 
@@ -57,52 +57,6 @@ const RSVP = () => {
           </div>
         </div>
       </div>
-
-      <div className="pattern-divider mb-4" style={{ marginTop: '3rem' }}></div>
-
-      {/* RSVP Section */}
-      <h2>RSVP & Ucapan</h2>
-      <p className="text-center mb-4">Kehadiran dan doa restu Bapak/Ibu/Saudara/i sangat kami nantikan.</p>
-      
-      {submitted ? (
-        <div className="text-center animate-fade-in p-4" style={{ backgroundColor: 'var(--color-primary)', color: 'var(--color-white)', borderRadius: '10px' }}>
-          <h3 style={{ color: 'var(--color-secondary)', marginBottom: '0.5rem' }}>Terima Kasih!</h3>
-          <p style={{ color: 'var(--color-white)' }}>Pesan dan konfirmasi kehadiran Anda telah kami terima.</p>
-        </div>
-      ) : (
-        <form onSubmit={handleSubmit} className="animate-fade-in">
-          <div className="form-group">
-            <input 
-              type="text" 
-              className="form-control" 
-              placeholder="Nama Lengkap" 
-              required
-              value={formData.name}
-              onChange={(e) => setFormData({...formData, name: e.target.value})}
-            />
-          </div>
-          <div className="form-group">
-            <select 
-              className="form-control"
-              value={formData.attendance}
-              onChange={(e) => setFormData({...formData, attendance: e.target.value})}
-            >
-              <option value="Hadir">Ya, Saya akan hadir</option>
-              <option value="Tidak Hadir">Maaf, saya tidak bisa hadir</option>
-            </select>
-          </div>
-          <div className="form-group">
-            <textarea 
-              className="form-control" 
-              placeholder="Berikan ucapan dan doa restu Anda..." 
-              required
-              value={formData.wishes}
-              onChange={(e) => setFormData({...formData, wishes: e.target.value})}
-            ></textarea>
-          </div>
-          <button type="submit" className="btn-primary" style={{ width: '100%' }}>Kirim Ucapan</button>
-        </form>
-      )}
     </section>
   );
 };

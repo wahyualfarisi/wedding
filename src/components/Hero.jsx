@@ -56,7 +56,6 @@ const Hero = ({ onOpenInvitation, isOpen }) => {
 
       {/* Top/Bottom layered Gigi Balang Element (Betawi Motif) */}
       <div className="gigi-balang-top" style={{ height: '30px', backgroundColor: 'var(--color-accent-yellow)', transform: 'rotate(180deg) translateY(0)', zIndex: 3, top: 0 }}></div>
-      <div className="gigi-balang-top" style={{ height: '20px', backgroundColor: 'var(--color-accent-green)', transform: 'rotate(180deg) translateY(-10px)', zIndex: 4, top: 0 }}></div>
 
       <div className="gigi-balang-bottom" style={{ height: '20px', backgroundColor: 'var(--color-accent-green)', transform: 'translateY(-10px)', zIndex: 4, bottom: 0 }}></div>
       <div className="gigi-balang-bottom" style={{ height: '30px', backgroundColor: 'var(--color-accent-yellow)', zIndex: 3, bottom: 0 }}></div>
@@ -69,7 +68,7 @@ const Hero = ({ onOpenInvitation, isOpen }) => {
         borderRadius: '10px',
         boxShadow: '0 0 30px rgba(0,0,0,0.7)',
         position: 'relative',
-        width: '85%',
+        width: '75%',
         maxWidth: '380px',
         overflow: 'hidden'
       }}>
