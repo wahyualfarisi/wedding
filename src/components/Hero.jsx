@@ -104,7 +104,7 @@ const Hero = ({ onOpenInvitation, isOpen }) => {
         {/* Text content — above the bg image & overlay */}
         <div style={{ position: 'relative', zIndex: 2 }}>
           <h4 style={{ letterSpacing: '4px', marginBottom: '0.5rem', fontSize: '0.8rem' }}>THE WEDDING OF</h4>
-          <h1 style={{ fontSize: '4rem', marginBottom: '0' }}>Putri & Wahyu</h1>
+          <h1 style={{ fontSize: '4rem', marginBottom: '0' }}>Putri & Alfarisi</h1>
 
           <div style={{ margin: '1rem 0', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' }}>
             <span style={{ width: '40px', height: '1px', background: 'var(--color-secondary)' }}></span>
