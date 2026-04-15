@@ -1,6 +1,7 @@
 import React, { useState, useRef, useCallback } from 'react';
 import Hero from './components/Hero';
 import Couple from './components/Couple';
+import Childhood from './components/Childhood';
 import EventSection from './components/EventSection';
 import Gallery from './components/Gallery';
 import RSVP from './components/RSVP';
@@ -28,7 +29,7 @@ function App() {
 
     // Smooth scroll to the couple section after a brief delay for the animation
     setTimeout(() => {
-      const coupleSection = document.getElementById('couple');
+      const coupleSection = document.getElementById('childhood');
       if (coupleSection) {
         coupleSection.scrollIntoView({ behavior: 'smooth' });
       }
@@ -57,6 +58,7 @@ function App() {
 
       {/* Main content — revealed after "Buka Undangan" */}
       <div className={`invitation-content ${isOpen ? 'invitation-content--open' : ''}`}>
+        <Childhood />
         <Couple />
         <EventSection />
         <Gallery />

@@ -2,7 +2,37 @@ import React from 'react';
 
 const Couple = () => {
   return (
-    <section id="couple" className="section-container text-center">
+    <section id="couple" className="section-container text-center" style={{ overflow: 'hidden' }}>
+      {/* Padang Background (Rumah Gadang) - Left Side */}
+      <img
+        src="/padang.png"
+        alt="Adat Padang"
+        style={{
+          position: 'absolute',
+          top: '20%',
+          left: '-15%',
+          height: '35%',
+          objectFit: 'contain',
+          zIndex: -1,
+          opacity: 0.2
+        }}
+      />
+
+      {/* Betawi Background (Monas & Ondel-ondel) - Right Side */}
+      <img
+        src="/betawi.png"
+        alt="Adat Betawi"
+        style={{
+          position: 'absolute',
+          bottom: '20%',
+          right: '-15%',
+          height: '35%',
+          objectFit: 'contain',
+          zIndex: -1,
+          opacity: 0.2
+        }}
+      />
+
       <div className="pattern-divider mb-4"></div>
       <h4 style={{ color: 'var(--color-secondary)', letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '1rem', fontFamily: 'var(--font-body)' }}>Maha Suci Allah</h4>
       <p className="mb-4" style={{ fontStyle: 'italic', maxWidth: '400px', margin: '0 auto 2rem' }}>

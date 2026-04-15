@@ -31,20 +31,20 @@ const RSVP = () => {
         
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px', margin: '0 auto' }}>
           <div className="event-card" style={{ padding: '1.5rem', marginBottom: '0' }}>
-            <h3 style={{ fontFamily: 'var(--font-body)', fontSize: '1.2rem', color: 'var(--color-text)' }}>Bank Mandiri</h3>
-            <p className="mb-2" style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--color-primary)' }}>1660003183985</p>
+            <h3 style={{ fontFamily: 'var(--font-body)', fontSize: '1.2rem', color: 'var(--color-text)' }}>Bank BCA</h3>
+            <p className="mb-2" style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--color-primary)' }}>6871029277</p>
             <p className="mb-3">a.n. Wahyu Alfarisi (Pria)</p>
             <button 
-              onClick={() => handleCopy('1660003183985', 'mandiri')} 
+              onClick={() => handleCopy('6871029277', 'bca')} 
               className="btn-primary" 
               style={{ padding: '0.5rem 1rem', fontSize: '0.9rem', width: '100%' }}
             >
-              <FaCopy /> {copied === 'mandiri' ? 'Tersalin!' : 'Salin No. Rekening'}
+              <FaCopy /> {copied === 'bca' ? 'Tersalin!' : 'Salin No. Rekening'}
             </button>
           </div>
 
           <div className="event-card" style={{ padding: '1.5rem', marginBottom: '0' }}>
-            <h3 style={{ fontFamily: 'var(--font-body)', fontSize: '1.2rem', color: 'var(--color-text)' }}>Bank BCA</h3>
+            <h3 style={{ fontFamily: 'var(--font-body)', fontSize: '1.2rem', color: 'var(--color-text)' }}>Bank BRI</h3>
             <p className="mb-2" style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--color-primary)' }}>020601213190501</p>
             <p className="mb-3">a.n. Putri Nur Azizah (Wanita)</p>
             <button 

@@ -380,3 +380,97 @@ textarea.form-control {
     transform: translateY(0);
   }
 }
+
+/* ========================================
+   Childhood Section
+   ======================================== */
+
+.childhood-section {
+  background-color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 1rem;
+  border-top: 2px solid rgba(212, 175, 55, 0.3);
+  border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+  margin: 1rem 0;
+  box-shadow: inset 0 0 40px rgba(0,0,0,0.02);
+}
+
+.childhood-content {
+  position: relative;
+  z-index: 2;
+}
+
+.childhood-title {
+  color: #a45a5a !important; /* Muted red to match the ribbon theme */
+  font-weight: 600;
+}
+
+.childhood-photo-container {
+  position: relative;
+  width: 260px;
+  max-width: 90%;
+  height: auto;
+  margin: 0 auto 2rem;
+}
+
+.childhood-photo {
+  width: 100%;
+  border-radius: 20px;
+  border: 4px solid #d85d5d;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1), 0 5px 15px rgba(216, 93, 93, 0.2);
+  transform: rotate(-3deg);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.childhood-photo:hover {
+  transform: rotate(0deg) scale(1.03);
+}
+
+.decorative-heart {
+  position: absolute;
+  color: #d85d5d;
+  font-size: 1.8rem;
+  animation: floatHeart 3s ease-in-out infinite;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 3;
+}
+
+.decorative-ring {
+  position: absolute;
+  font-size: 2.2rem;
+  animation: floatHeart 4s ease-in-out infinite reverse;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+  z-index: 3;
+}
+
+@keyframes floatHeart {
+  0%, 100% { transform: translateY(0) scale(1) rotate(0deg); }
+  50% { transform: translateY(-15px) scale(1.1) rotate(10deg); }
+}
+
+.childhood-quote {
+  line-height: 1.8;
+  font-family: var(--font-heading);
+}
+
+/* Ribbon decoration SVG imitation */
+.ribbon-decoration {
+  position: absolute;
+  width: 150px;
+  height: 300px;
+  background-image: url("data:image/svg+xml,%3Csvg width='150' height='300' viewBox='0 0 150 300' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10,10 C60,80 140,20 70,140 C10,260 140,260 70,290' stroke='%23d85d5d' stroke-width='2' stroke-linecap='round' fill='none' opacity='0.5' /%3E%3Cpath d='M25,25 C75,95 155,35 85,155 C25,275 155,275 85,305' stroke='%23d85d5d' stroke-width='1.5' stroke-dasharray='4 4' stroke-linecap='round' fill='none' opacity='0.4' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.ribbon-decoration.left {
+  top: 5%;
+  left: -40px;
+}
+
+.ribbon-decoration.right {
+  bottom: 5%;
+  right: -40px;
+  transform: scaleX(-1);
+}
