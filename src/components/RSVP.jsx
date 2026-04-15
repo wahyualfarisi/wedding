@@ -32,10 +32,10 @@ const RSVP = () => {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px', margin: '0 auto' }}>
           <div className="event-card" style={{ padding: '1.5rem', marginBottom: '0' }}>
             <h3 style={{ fontFamily: 'var(--font-body)', fontSize: '1.2rem', color: 'var(--color-text)' }}>Bank Mandiri</h3>
-            <p className="mb-2" style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--color-primary)' }}>123455</p>
+            <p className="mb-2" style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--color-primary)' }}>1660003183985</p>
             <p className="mb-3">a.n. Wahyu Alfarisi (Pria)</p>
             <button 
-              onClick={() => handleCopy('123455', 'mandiri')} 
+              onClick={() => handleCopy('1660003183985', 'mandiri')} 
               className="btn-primary" 
               style={{ padding: '0.5rem 1rem', fontSize: '0.9rem', width: '100%' }}
             >
@@ -45,14 +45,14 @@ const RSVP = () => {
 
           <div className="event-card" style={{ padding: '1.5rem', marginBottom: '0' }}>
             <h3 style={{ fontFamily: 'var(--font-body)', fontSize: '1.2rem', color: 'var(--color-text)' }}>Bank BCA</h3>
-            <p className="mb-2" style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--color-primary)' }}>23423432</p>
+            <p className="mb-2" style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--color-primary)' }}>020601213190501</p>
             <p className="mb-3">a.n. Putri Nur Azizah (Wanita)</p>
             <button 
-              onClick={() => handleCopy('23423432', 'bca')} 
+              onClick={() => handleCopy('020601213190501', 'bri')} 
               className="btn-primary" 
               style={{ padding: '0.5rem 1rem', fontSize: '0.9rem', width: '100%' }}
             >
-              <FaCopy /> {copied === 'bca' ? 'Tersalin!' : 'Salin No. Rekening'}
+              <FaCopy /> {copied === 'bri' ? 'Tersalin!' : 'Salin No. Rekening'}
             </button>
           </div>
         </div>
